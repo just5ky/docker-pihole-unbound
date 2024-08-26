@@ -44,7 +44,7 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/pihole-unbound
 
       - name: Build and push Docker images
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v6
         with:
           context: "{{defaultContext}}:one-container/pihole-unbound"
           file: Dockerfile
